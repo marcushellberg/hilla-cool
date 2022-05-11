@@ -1,5 +1,5 @@
 import { html } from 'lit';
-import { customElement, property, state } from 'lit/decorators.js';
+import { customElement, property } from 'lit/decorators.js';
 import { View } from './view';
 import '@vaadin/vaadin-grid';
 import '@vaadin/vaadin-button';
