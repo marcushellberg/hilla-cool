@@ -1,5 +1,5 @@
 import { Route } from '@vaadin/router';
-import './views/list/list-view';
+import './views/hilla-view';
 
 export type ViewRoute = Route & {
   title?: string;
@@ -11,8 +11,7 @@ export const views: ViewRoute[] = [
   // place routes below (more info https://hilla.dev/docs/routing)
   {
     path: '',
-    component: 'list-view',
-    icon: 'la la-file',
+    component: 'hilla-view',
     title: 'list',
   },
 ];
