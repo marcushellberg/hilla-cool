@@ -1,4 +1,4 @@
-package com.example.application;
+package com.example.application.endpoint;
 
 import java.time.Duration;
 import java.util.List;
@@ -6,7 +6,6 @@ import com.example.application.data.entity.Person;
 import com.example.application.data.repository.PersonRepository;
 import com.vaadin.flow.server.auth.AnonymousAllowed;
 import dev.hilla.Endpoint;
-import dev.hilla.Nonnull;
 import reactor.core.publisher.Flux;
 
 @Endpoint
@@ -19,8 +18,8 @@ public class PersonEndpoint {
     this.repo = repo;
   }
 
-  @Nonnull
-  public List<@Nonnull Person> findAll() {
+
+  public List<Person> findAll() {
     return repo.findAll();
   }
 
@@ -28,8 +27,7 @@ public class PersonEndpoint {
     return repo.save(p);
   }
 
-  @Nonnull
-  public Flux<@Nonnull String> getNames() {
+  public Flux<String> getNames() {
     return Flux.just("Barry", "Lettie", "Cora").delayElements(Duration.ofSeconds(2));
   }
 }
